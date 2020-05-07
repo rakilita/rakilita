@@ -1,5 +1,4 @@
 /* MAIN */
-
 body {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: .8rem;
@@ -9,28 +8,28 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: #b3c7c68a;
 }
 .sec-break {
-    padding-top: 1vh;
     background-color: white;
     width: 100%;
+    margin: 5vh 0;
 }
 hr {
-    margin: 5vh auto 0;
     width: 5%;
     border-bottom: 1vh dotted #bbbfbe;
-    background-color: white;
     border-top: 0;
-}	
+    margin: 0 auto;
+}
+	
 /* NAV */
-
-.navbar {
-    padding: 0 5vh;
+#nav {
+    background-color: #bbbfbe;
     position: fixed;
     width: -webkit-fill-available;
-    background-color: #bbbfbe;
     z-index: 1;
+}
+.navbar {
+    padding: 0 5vh;
 }
 .navbar a, .navbar-button {
     color: #31282880;
@@ -52,9 +51,13 @@ hr {
 }
 
 /* ABOUT */
-
+#about {
+    background: #b3c7c68a;
+}
 .aboutsec {
-    margin: 10vh auto;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    padding: 10vh 0 5vh;
 }
 .about-intro {
     font-size: 1.2rem;
@@ -71,26 +74,108 @@ hr {
     margin: auto;
     display: block;
 }
+.about-cv {
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+.about-cv h3 {
+    text-transform: uppercase;
+    color: #333333;
+    border-bottom: 1.2px solid #333333;
+}
+.cv {
+    width: 80%;
+    margin: 3vh auto;
+    line-height: 2;
+}
+.cv-date {
+    text-align: center;
+}
+.cv-post {
+    border-left: 1px solid;
+}
+.rate {
+    color: #ff00007d;
+}
+.skill-icon {
+    font-size: 2rem;
+    border: 2px solid;
+    padding: .2em .25em .15em;
+}
+.cv-skills {
+    width: 70%;
+    margin: 3vh auto;
+    line-height: 2;
+}
 
 /* ARTICLES */
 
-.articlesec {
-    padding: 15vh;
+section#articles {
     background-color: white;
+}
+.articlesec {
+    padding: 3vh;
     width: 100%;
 }
 .article-box {
     padding: 5vh;
+    margin-bottom: 2vh;
 }
+
+/* GALLERY */
+#gallery {
+    background: #b3c7c68a;
+}
+
+
 /* RESPONSIVE */
 
-@media only screen and (max-width: 991px) {
-    .about-intro {
-	font-size: .9rem;
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+    .articlesec {
+	padding: 10vh 5vh;
+    }
+    .article-box h3 {
+	font-size: 1.25rem;
+    }
+    .aboutsec {
+	padding: 10vh 5vh;
+    }
+    .cv-skills {
+	width: 100%;
     }
 }
-@media only screen and (max-width: 767px) {
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) {
     .about-img {
 	margin: 0 auto 10%;
     }
+    .articlesec {
+	padding: 10vh 5vh 1vh;
+    }
+    .aboutsec {
+	padding: 10vh 5vh;
+    }
+    .cv-skills {
+	width: 100%;
+    }
 }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) { 
+    .about-intro {
+	font-size: .9rem;
+    }
+    .cv-skills {
+	width: 100%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1199.98px) { 
+
+
+}
+
