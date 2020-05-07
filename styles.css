@@ -1,20 +1,36 @@
+/* MAIN */
+
 body {
     font-family: "Montserrat", Arial, sans-serif;
-    background: #fff;
     font-size: .8rem;
     line-height: 1.5;
-    background: #3E5151;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 }
-.main-container {
+.ajnr-container {
     width: 100%;
     overflow: hidden;
     position: relative;
+    background: #b3c7c68a;
 }
+.sec-break {
+    padding-top: 1vh;
+    background-color: white;
+    width: 100%;
+}
+hr {
+    margin: 5vh auto 0;
+    width: 5%;
+    border-bottom: 1vh dotted #bbbfbe;
+    background-color: white;
+    border-top: 0;
+}	
+/* NAV */
+
 .navbar {
-    padding: 0 4.5rem;
+    padding: 0 5vh;
+    position: fixed;
+    width: -webkit-fill-available;
+    background-color: #bbbfbe;
+    z-index: 1;
 }
 .navbar a, .navbar-button {
     color: #31282880;
@@ -24,60 +40,57 @@ body {
     text-decoration: none;
 }
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 .nav-item {
     padding: 0 0 0 3vh;
 }
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-right: .5rem;
 }
-.menu-content {
-    width: 100%;
-    float: right;
+
+/* ABOUT */
+
+.aboutsec {
+    margin: 10vh auto;
 }
-.intro {
-    padding: .5rem 5rem;
-    color: white;
-}
-.rakilita {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: block;
-    width: 120px;
-    height: 120px;
-    margin: 5vh auto 10vh;
-    border: 2px solid white;
-    border-radius: 50% !important;
-    background-image: url(../images/raki.jpg);
-}
-.intro h2 {
-    text-align: center;
-    font-size: 2rem;				
-}
-.intro p {
+.about-intro {
+    font-size: 1.2rem;
+    width: -webkit-fill-available;
+    color: #292929;
     text-align: justify;
-    line-height: 2;
-    font-size: 1rem;
-    text-indent: 5vh;
+    text-indent: 20vh;
 }
-.article-header {
+.about-img {
+    max-width: 80%;
+    border-radius: 50%;
+    border: 1px solid;
+    box-shadow: 2px 2px 4px #8e8e8e;
+    margin: auto;
+    display: block;
+}
+
+/* ARTICLES */
+
+.articlesec {
     padding: 15vh;
     background-color: white;
     width: 100%;
 }
+.article-box {
+    padding: 5vh;
+}
+/* RESPONSIVE */
 
-@media only screen and (min-width: 768px) {
-    .intro {
-        padding: 1.5rem 10rem;
+@media only screen and (max-width: 991px) {
+    .about-intro {
+	font-size: .9rem;
     }
-    .intro h2 {
-        font-size: 3rem;				
-    }
-    .intro p {
-        font-size: 1.2rem;
+}
+@media only screen and (max-width: 767px) {
+    .about-img {
+	margin: 0 auto 10%;
     }
 }
