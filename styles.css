@@ -1,0 +1,83 @@
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background: #fff;
+    font-size: .8rem;
+    line-height: 1.5;
+    background: #3E5151;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.main-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.navbar {
+    padding: 0 4.5rem;
+}
+.navbar a, .navbar-button {
+    color: #31282880;
+}
+.navbar a:hover, .navbar-button:hover {
+    color: #3E5151;
+    text-decoration: none;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav-item {
+    padding: 0 0 0 3vh;
+}
+.nav-link {
+    font-size: 1.2rem;
+    padding-right: .5rem;
+}
+.menu-content {
+    width: 100%;
+    float: right;
+}
+.intro {
+    padding: .5rem 5rem;
+    color: white;
+}
+.rakilita {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 5vh auto 10vh;
+    border: 2px solid white;
+    border-radius: 50% !important;
+    background-image: url(../images/raki.jpg);
+}
+.intro h2 {
+    text-align: center;
+    font-size: 2rem;				
+}
+.intro p {
+    text-align: justify;
+    line-height: 2;
+    font-size: 1rem;
+    text-indent: 5vh;
+}
+.article-header {
+    padding: 15vh;
+    background-color: white;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro {
+        padding: 1.5rem 10rem;
+    }
+    .intro h2 {
+        font-size: 3rem;				
+    }
+    .intro p {
+        font-size: 1.2rem;
+    }
+}
