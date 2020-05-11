@@ -1,4 +1,7 @@
 /* MAIN */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: .8rem;
@@ -65,6 +68,11 @@ hr {
     color: #292929;
     text-align: justify;
     text-indent: 20vh;
+    animation: fadeEffect 3s;
+}
+@keyframes fadeEffect {
+   from {opacity: 0;}
+   to {opacity: 1;}
 }
 .about-img {
     max-width: 80%;
@@ -89,24 +97,60 @@ hr {
     margin: 3vh auto;
     line-height: 2;
 }
+.cv-part1 {
+    padding: 2vh;
+}
 .cv-date {
     text-align: center;
 }
 .cv-post {
     border-left: 1px solid;
 }
-.rate {
-    color: #ff00007d;
+.cv-part2 {
+    border: 1px solid;
+    padding: 2vh;
+    background: #bbbfbe;
 }
-.skill-icon {
-    font-size: 2rem;
-    border: 2px solid;
-    padding: .2em .25em .15em;
+.cv-contact {
+    padding: 2vh 5vh;
 }
 .cv-skills {
-    width: 70%;
+    width: 85%;
     margin: 3vh auto;
     line-height: 2;
+}
+.skillBox {
+    padding: 0;
+}
+.skillRate {
+    margin: 1vh 0;
+    width: -webkit-fill-available;
+    padding: 0;
+    background: #d6d6d6;
+    border: 1px solid;
+    box-shadow: 1px 2px #808080e3;
+}
+.rate {
+    background: #3dbec3;
+    padding-left: 2vh;
+}
+.rate-10 {
+    background: linear-gradient(90deg, #3dbec3 10%, #d6d6d6 0%);
+}
+.rate-60 {
+    background: linear-gradient(90deg, #3dbec3 60%, #d6d6d6 0%);
+}
+.rate-70 {
+    background: linear-gradient(90deg, #3dbec3 70%, #d6d6d6 0%);
+}
+.rate-80 {
+    background: linear-gradient(90deg, #3dbec3 80%, #d6d6d6 0%);
+}
+.rate-90 {
+    background: linear-gradient(90deg, #3dbec3 90%, #d6d6d6 0%);
+}
+.rate-100 {
+    background: linear-gradient(90deg, #3dbec3 100%, #d6d6d6 0%);
 }
 
 /* ARTICLES */
@@ -120,7 +164,6 @@ section#articles {
 }
 .article-box {
     padding: 5vh;
-    margin-bottom: 2vh;
 }
 
 /* GALLERY */
@@ -130,25 +173,91 @@ section#articles {
 
 
 /* RESPONSIVE */
-
-/* Small devices (landscape phones, 576px and up) */
+/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    body {
+	font-size: .6rem;
+    }
+    hr {
+        width: 20%;
+	border-bottom: .7vh dotted #bbbfbe;
+    }
+    .aboutsec {
+	padding: 10vh 5vh 0;
+    }
+    .about-intro {
+	font-size: .8rem;
+	margin: 2vh;
+	text-indent: 10vh;
+    }
+    .about-cv {
+	width: -webkit-fill-available;
+	margin: 3vh auto;
+	padding-top: 0;
+    }
+    .cv {
+	width: 80%;
+	margin: 2vh auto;
+	line-height: 2;
+    }
+    .cv-part1 {
+	order: 2;
+	margin: 2vh 0;
+    }
+    .cv-post {
+	border-top: 1px solid;
+	border-left: 0;
+	padding: 0;
+    }
+    .cv-contact {
+	padding: 2vh 1vh;
+    }
+    .cv-part2 {
+	order: 1;
+    }
+    .cv-skills {
+	width: 100%;
+	margin: 2vh auto;
+    }
     .articlesec {
 	padding: 10vh 5vh;
     }
     .article-box h3 {
 	font-size: 1.25rem;
     }
-    .aboutsec {
-	padding: 10vh 5vh;
+    .container-likes img {
+        max-width: 12vw;
+        height: 5vh;
+        margin: 0 auto;
+        display: block;
     }
-    .cv-skills {
-	width: 100%;
+    span.fas.fa-heart {
+        font-size: 0.5rem;
     }
+    h3 {
+	font-size: 1.25rem;
+    }
+    h5 {
+	font-size: 1rem;
+    }
+    h6 {
+	font-size: .8rem;
+    }
+
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 767.98px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+	font-size: .7rem;
+    }
+    hr {
+        width: 10%;
+	border-bottom: .7vh dotted #bbbfbe;
+    }
+    .about-intro {
+	font-size: 1rem;
+    }
     .about-img {
 	margin: 0 auto 10%;
     }
@@ -156,25 +265,56 @@ section#articles {
 	padding: 10vh 5vh 1vh;
     }
     .aboutsec {
-	padding: 10vh 5vh;
+	padding: 10vh 5vh 0;
     }
     .cv-skills {
 	width: 100%;
+    }
+    .cv-part1 {
+	order: 2;
+	margin: 2vh 0;
+    }
+    .cv-part2 {
+	order: 1;
+    }
+    h3 {
+	font-size: 1.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    hr {
+        width: 10%;
+    }
+    .about-intro {
+	font-size: 1rem;
+    }
+    .cv {
+	width: 100%;
+    }
+    .cv-skills {
+	width: 100%;
+    }
+    .cv-contact {
+	padding: 2vh 0;
+	font-size: .7rem;
+    }
+    h3 {
+	font-size: 1.5rem;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (max-width: 991.98px) { 
-    .about-intro {
-	font-size: .9rem;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .cv-contact {
+	padding: 2vh;
     }
-    .cv-skills {
-	width: 100%;
-    }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1199.98px) { 
+@media (min-width: 1200px) {
 
 
 }
